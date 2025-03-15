@@ -1,12 +1,13 @@
 {
   "name": "async-use-state",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A React hook for managing state with async callbacks.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "react",
@@ -17,15 +18,28 @@
   ],
   "author": "Shahin Behzadrad",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shahin-behzadrad/async-use-state.git"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "typescript": "^5.8.2"
+    "ts-jest": "^29.2.6"
   }
 }
